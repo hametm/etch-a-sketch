@@ -5,10 +5,11 @@ for (let i = 0; i < 16; i++) {
     square.classList.add('square');
     grid.appendChild(square);
     square.addEventListener('mouseover', () => {
-        let colors = ["red", "blue", "orange"];
-        let colorChoice = Math.floor(Math.random() * 3);
-        let colorString = String(colors[colorChoice]);
-        square.style.backgroundColor = colorString;;
+        let colors = ["red", "blue", "orange", "purple", "green", "yellow"];
+        currentIndex = colors.indexOf(square.style.backgroundColor);
+        colorsMinusCurrent = colors.splice(currentIndex, 1);
+        let colorChoice = Math.floor(Math.random() * 5);
+        square.style.backgroundColor = colors[colorChoice];
     });
 }
 
