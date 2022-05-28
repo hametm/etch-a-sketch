@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+#grid {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    background-color: grey;
+    flex-wrap: wrap;
+}
+
+.square {
+    background-color: yellow;
+    height: 125px;
+    width: 125px;
+}
