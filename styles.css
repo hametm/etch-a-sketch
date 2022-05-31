@@ -126,7 +126,9 @@ h2 {
 
 #choiceContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .square {
@@ -136,7 +138,7 @@ h2 {
 }
 
 .colorChoiceBtn {
-    background-color: rgb(141, 64, 144);
+    background-color: rgb(221, 62, 229);
     color: white;
     font-size: 18px;
     border-radius: 12px;
@@ -146,22 +148,40 @@ h2 {
     cursor: pointer;
 }
 
-#monochromeButton:hover {
+#monochrome:hover {
     background-color: white;
     color: black
 }
 
-#rainbowButton:hover {
+#rainbow:hover {
     background-image: linear-gradient(to right, Red , Orange, Yellow, Green, Blue, Indigo, Violet);
     color: white;
 }
 
-#clearButton:hover {
+#clear:hover {
     background-color: rgb(241, 240, 240);
     color: rgb(95, 92, 92);
 }
 
-#pinkButton:hover {
+#pink:hover {
     background-color: pink;
     color: indigo;
+}
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#squareSize {
+    display: flex;
+    color: rgb(76, 76, 76);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#slider {
+
 }
