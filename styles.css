@@ -35,7 +35,7 @@ body {
     display: flex;
     height: 500px;
     width: 500px;
-    background-color: grey;
+    background-color: white;
     flex-wrap: wrap;
     border-style: solid;
     box-shadow: -2px 0 5px grey, 0 2px 5px grey, 2px 0 grey, 0 -2px 5px grey;
@@ -43,22 +43,34 @@ body {
 }
 
 .square {
-    background-color: grey;
+    background-color: white;
 
 }
 
-#sizeChoice {
+.colorChoice {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
-#sizeChoiceBtn {
-    font-family: monospace;
+.colorChoiceBtn {
+    background-color: grey;
+    color: white;
     font-size: 18px;
-    padding: 10px;
     border-radius: 12px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: black;
+    border-style: none;
+    padding: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#monochromeButton:hover {
+    background-color: white;
+    color: black
+}
+
+#rainbowButton:hover {
+    background-image: linear-gradient(to right, Red , Orange, Yellow, Green, Blue, Indigo, Violet);
+    color: white;
 }
