@@ -9,15 +9,24 @@
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <div id="header"><p id="headerText">Welcome to the Etch-a-Sketch!</p></div>
+    <div id="header">
+            <h1>Fetch-a-Sketch</h1>
+            <h2>She doesn't even go here!</h2>
+    </div>
     <div id=main>
-        <div id="grid"></div>
-        <div class="colorChoice">
-            <button class="colorChoiceBtn" id="monochromeButton">Monochrome</button>
-            <button class="colorChoiceBtn" id="rainbowButton">Rainbow!</button>
+        <div id="gridContainer">
+            <div id="imageContainer1"><img src="images/regina.jpeg" id="image1"></div>
+            <div id="grid"></div>
+            <div id="imageContainer2"><img src="images/cady.jpeg" id="image2"></div>
         </div>
-        <div class="sliderContainer">
-            <input type="range" min="1" max="100" id="slider">
+        <div id="choiceContainer">
+            <div class="choices">
+                <button class="colorChoiceBtn" id="monochromeButton">Monochrome</button>
+                <button class="colorChoiceBtn" id="rainbowButton">Rainbow!</button>
+                <button class="colorChoiceBtn" id="pinkButton">On Wednesdays we wear pink</button>
+                <button class="colorChoiceBtn" id="clearButton">Clear</button>
+                <input type="range" min="1" max="100" id="slider">
+            </div>
         </div>
 </body>
 </html>
