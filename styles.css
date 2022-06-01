@@ -114,6 +114,7 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 180px;
 }
 
 .square {
@@ -144,7 +145,7 @@ h2 {
 }
 
 #clear:hover, .clearSelected {
-    background-color: rgb(241, 240, 240);
+    background-color: rgb(236, 178, 239);
     color: rgb(95, 92, 92);
 }
 
@@ -159,7 +160,7 @@ h2 {
 }
 
 #clear {
-    background-color:white;
+    background-color:rgb(225, 225, 225);
     color: darkblue;
 }
 
@@ -181,7 +182,7 @@ h2 {
     align-items: center;
     margin-bottom: 50px;
     margin-top: 10px;
-    gap: 15px;
+    gap: 10px;
 }
 
 #squareSize {
