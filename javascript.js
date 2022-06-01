@@ -5,6 +5,7 @@ const sizeChoice = document.querySelector("#sizeChoice");
 const slider = document.querySelector("#slider");
 const clearButton = document.querySelector("#clear");
 const pinkButton = document.querySelector("#pink");
+const glenButton = document.querySelector("#glen");
 const colorChoiceBtn = document.querySelectorAll(".colorChoiceBtn");
 
 let userChoice = 10;
@@ -37,6 +38,9 @@ function createSquares() {
             case "pink":
                 changeToPink(square);
                 break;
+            case "glen":
+                changeToGlen(square);
+                break;
             default:
                 break;
         }
@@ -65,6 +69,13 @@ function changeToPink(square) {
     square.addEventListener('mouseover', () => {
         let pinkColors = ["rgb(216, 153, 213)", "rgb(221, 62, 229)", "rgb(129, 33, 107)"];
         setRandomColor(pinkColors, square);
+    });
+}
+
+function changeToGlen(square) {
+    square.addEventListener('mouseover', () => {
+        let glenColors = ["rgb(96, 234, 255)", "rgb(177, 31, 255)", "rgb(241, 250, 59)", "rgb(0, 255, 55)", "rgb(255, 0, 166)"];
+        setRandomColor(glenColors, square);
     });
 }
 
