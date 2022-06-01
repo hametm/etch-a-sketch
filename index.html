@@ -11,25 +11,33 @@
 <body>
     <div id="header">
             <h1>Fetch-a-Sketch</h1>
-            <h2>She doesn't even go here!</h2>
+            <h2>"She doesn't even go here!"</h2>
     </div>
     <div id=main>
-        <div id="gridContainer">
-            <div id="imageContainer1"><img src="images/regina.jpeg" id="image1"></div>
-            <div id="grid"></div>
-            <div id="imageContainer2"><img src="images/karen.png" id="image2"></div>
-        </div>
-        <div id="choiceContainer">
+        <div id="imageContainer1"><img src="images/regina.jpeg" id="image1"></div>
+        <div id="center">
+            <div id="choiceContainer">
+                <div class="choices">
+                    <div class="side1">
+                        <button class="colorChoiceBtn" id="monochrome">Monochrome</button>
+                        <button class="colorChoiceBtn" id="rainbow">Rainbow</button>
+                    </div>
+                    <div class="side2">
+                        <button class="colorChoiceBtn" id="pink">It's Wednesday</button>
+                        <button class="colorChoiceBtn" id="clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gridContainer">
+                <div id="grid"></div>
+            </div>
             <div id="sliderContainer">
-                <p id="squareSize">Square size</p>
+                <p id="squareSize">Square size:</p>
                 <input type="range" min="1" max="25" id="slider">
             </div>
-            <div class="choices">
-                <button class="colorChoiceBtn" id="monochrome">Monochrome</button>
-                <button class="colorChoiceBtn" id="rainbow">Rainbow</button>
-                <button class="colorChoiceBtn" id="pink">On Wednesdays we wear pink</button>
-                <button class="colorChoiceBtn" id="clear">Clear</button>
-            </div>
         </div>
+        <div id="imageContainer2"><img src="images/karen.png" id="image2"></div>
+    </div>
+    <div id="footer">Made by Morgan</div>
 </body>
 </html>

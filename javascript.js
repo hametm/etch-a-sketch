@@ -38,7 +38,7 @@ function createSquares() {
                 changeToPink(square);
                 break;
             default:
-                changeToBlack(square);
+                break;
         }
         grid.appendChild(square);
     }    
@@ -79,17 +79,30 @@ function setSquareStyle(square) {
     square.classList.add('square');
 }
 
+function pressButton(button) {
+    if (colorChoice != "clear") {
+        button.classList.add(`${colorChoice}Selected`);
+    }
+}
+
+function releaseButtons() {
+    colorChoiceBtn.forEach(button => {
+        button.classList.remove(`${button.id}Selected`);
+    });
+}
+
 // Event listeners
 colorChoiceBtn.forEach(button => {
     button.addEventListener('click', () => {
         colorChoice = button.id;
-        console.log(colorChoice);
         createGrid(colorChoice);
+        releaseButtons();
+        pressButton(button);
+
     })
 });
 
 slider.addEventListener('mouseup', () => {
     userChoice = slider.value;
-    console.log(userChoice);
     createGrid();
 });
