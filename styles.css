@@ -3,7 +3,9 @@ body {
     display: flex;
     flex-direction: column;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(254, 227, 255);
+    background-image: url(images/notebook.jpeg);
+    background-size: contain;
+    /*background-color: rgb(254, 227, 255);*/
 }
 
 /* Header */
@@ -45,6 +47,32 @@ h2 {
     justify-content: space-evenly;
 }
 
+#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+}
+
+
+#right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 300px;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    background-color: rgb(250, 231, 251);
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
 #grid {
     display: grid;
     width: 500px;
@@ -73,15 +101,13 @@ h2 {
 .colorButton {
     background-color: rgb(247, 118, 238);
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     border-radius: 12px;
     border-style: none;
     padding: 15px;
     cursor: pointer;
     letter-spacing: 1px;
     box-shadow: 2px 2px 5px black;
-    font-family: 'Shadows Into Light', cursive;
-
 }
 
 .colorButton:hover, .selected {
@@ -121,25 +147,8 @@ h2 {
     height: 275px;
     width: 275px;
     border-radius: 50%;
-    margin-bottom: 100px;
+    margin-bottom: 90px;
     box-shadow: 2px 0px 5px rgb(85, 83, 83), 0px 2px rgb(85, 83, 83), -2px 0px rgb(85, 83, 83), 0px -2px rgb(85, 83, 83);
-}
-
-#leftImageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 300px;
-
-}
-
-#rightImageContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 300px;
 }
 
 .side {
@@ -149,19 +158,79 @@ h2 {
     width: 180px;
 }
 
-#center {
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-}
-
 .quote {
     text-align: center;
     font-size: 20px;
-    color: rgba(255, 192, 203, 0.751);
+    color: rgb(63, 63, 63);
     font-weight: bold;
-    text-shadow: 1px 1px black;
-    font-family: monospace;
+    letter-spacing: 2px;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#quote1 {
+    display: flex;
+    margin-top: -80px;
+    transform: rotate(-10deg);
+    justify-content: flex-start;
+}
+
+#quote1Text {
+    color: black;
+    font-size: 22px;
+}
+
+#quote2 {
+    display: flex;
+    margin-bottom: -20px;
+    transform: rotate(5deg);
+}
+
+#quote2Text {
+    color: darkblue;
+    letter-spacing: 2px;
+}
+
+#quote3 {
+    display: flex;
+    transform: rotate(-5deg);
+    margin-bottom: -80px;
+}
+
+#quote3Text {
+    color: black;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+#quote4 {
+    display: flex;
+    transform: rotate(3deg);
+}
+
+#quote4Text {
+    color: hotpink;
+    letter-spacing: 2px;
+}
+
+#quote5 {
+    display: flex;
+    transform: rotate(-5deg);
+}
+
+#quote5Text {
+    color: black;
+    font-weight: bold;
+    margin-top: -80px;
+    font-size: 24px;
+}
+
+#quote6 {
+    display: flex;
+    transform: rotate(2deg);
+}
+
+#quote6Text {
+    color: indigo;
 }
 
 #slider {
@@ -178,10 +247,8 @@ h2 {
 #sizeometer {
     display: flex;
     color: rgb(85, 83, 83);
-    font-size: 25px;
+    font-size: 22px;
     letter-spacing: 1px;
-    font-weight: bold;
-    font-family: 'Shadows Into Light', cursive;
 }
 
 .square {
