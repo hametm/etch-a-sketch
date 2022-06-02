@@ -2,6 +2,7 @@ const grid = document.querySelector("#grid");
 const sizeChoice = document.querySelector("#sizeChoice");
 const slider = document.querySelector("#slider");
 const colorButton = document.querySelectorAll(".colorButton");
+const reginaAlert = document.querySelector("#reginaAlert");
 
 let userChoice = 10;
 let colorChoice;
@@ -76,9 +77,9 @@ function changeToChristmas(square) {
 
 function setRandomColor(colors, square) {
     currentIndex = colors.indexOf(square.style.backgroundColor);
-    colorsMinusCurrent = colors.splice(currentIndex, 1);
-    let colorChoice = Math.floor(Math.random() * colors.length);
-    square.style.backgroundColor = colors[colorChoice];
+    let randomColor = Math.floor(Math.random() * colors.length);
+    square.style.backgroundColor = colors[randomColor];
+
 }
 
 function setSquareStyle(square) {
@@ -112,3 +113,7 @@ slider.addEventListener('mouseup', () => {
     userChoice = slider.value;
     createGrid();
 });
+
+reginaAlert.addEventListener('click', () => {
+    alert("Gretchen, stop trying to make \"fetch\" happen. It's not going to happen!");
+})
