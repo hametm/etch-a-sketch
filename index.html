@@ -5,41 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+    </style>
     <link rel="stylesheet" href = "styles.css">
     <script src="javascript.js" defer></script>
 </head>
 <body>
     <div id="header">
             <h1>Fetch-a-Sketch</h1>
-            <h2>"She doesn't even go here!"</h2>
     </div>
     <div id=main>
-        <div id="imageContainer1"><img src="images/regina.jpeg" id="image1"></div>
+        <div id="leftImageContainer">
+            <img src="images/regina.jpeg" id="leftImage">
+            <p class="quote">Get in, loser, we're going shopping!</p>
+        </div>
         <div id="center">
-            <div class="choices">
-                <div class="side">
-                    <button class="colorChoiceBtn" id="monochrome">Monochrome</button>
-                    <button class="colorChoiceBtn" id="pink">It's Wednesday</button>
-                </div>
-                <div class="clearContainer">
-                    <div class="middle">
-                        <button class="colorChoiceBtn" id="clear">Clear</button>
-                    </div>
-                </div>
-                <div class="side">
-                    <button class="colorChoiceBtn" id="rainbow">Rainbow</button>
-                    <button class="colorChoiceBtn" id="glen">You go, <br>Glen Coco</button>
-                </div>
-            </div>
             <div id="gridContainer">
                 <div id="grid"></div>
             </div>
             <div id="sliderContainer">
-                <p id="squareSize">Amount of squares:</p>
+                <p id="sizeometer">Size-o-meter:</p>
                 <input type="range" min="1" max="25" id="slider">
             </div>
+            <div class="colorButtonContainer">
+                <div class="side">
+                    <button class="colorButton" id="black">Black</button>
+                    <button class="colorButton" id="pink">It's Wednesday</button>
+                </div>
+                <div class="clearContainer">
+                    <div class="middle">
+                        <button class="colorButton" id="clear">Clear</button>
+                    </div>
+                </div>
+                <div class="side">
+                    <button class="colorButton" id="rainbow">Rainbow</button>
+                    <button class="colorButton" id="christmas">Jingle Bell Rock</button>
+                </div>
+            </div>
         </div>
-        <div id="imageContainer2"><img src="images/karen.png" id="image2"></div>
+        <div id="rightImageContainer">
+            <p class="quote">I have a fifth sense!<br>It's like I have ESPN or something.</p>
+            <img src="images/karen.png" id="rightImage">
+        </div>
     </div>
     <div id="footer">Made by Morgan</div>
 </body>

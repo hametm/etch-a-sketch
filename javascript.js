@@ -1,12 +1,7 @@
 const grid = document.querySelector("#grid");
-const monochromeButton = document.querySelector("#monochrome");
-const rainbowButton = document.querySelector("#rainbow");
 const sizeChoice = document.querySelector("#sizeChoice");
 const slider = document.querySelector("#slider");
-const clearButton = document.querySelector("#clear");
-const pinkButton = document.querySelector("#pink");
-const glenButton = document.querySelector("#glen");
-const colorChoiceBtn = document.querySelectorAll(".colorChoiceBtn");
+const colorButton = document.querySelectorAll(".colorButton");
 
 let userChoice = 10;
 let colorChoice;
@@ -29,7 +24,7 @@ function createSquares() {
         const square = document.createElement("div");
         square.classList.add("square");
         switch(colorChoice) {
-            case "monochrome":
+            case "black":
                 changeToBlack(square);
                 break;
             case "rainbow":
@@ -38,8 +33,8 @@ function createSquares() {
             case "pink":
                 changeToPink(square);
                 break;
-            case "glen":
-                changeToGlen(square);
+            case "christmas":
+                changeToChristmas(square);
                 break;
             default:
                 break;
@@ -72,10 +67,10 @@ function changeToPink(square) {
     });
 }
 
-function changeToGlen(square) {
+function changeToChristmas(square) {
     square.addEventListener('mouseover', () => {
-        let glenColors = ["rgb(96, 234, 255)", "rgb(177, 31, 255)", "rgb(241, 250, 59)", "rgb(0, 255, 55)", "rgb(255, 0, 166)"];
-        setRandomColor(glenColors, square);
+        let christmasColors = ["red", "green"];
+        setRandomColor(christmasColors, square);
     });
 }
 
@@ -92,18 +87,18 @@ function setSquareStyle(square) {
 
 function pressButton(button) {
     if (colorChoice != "clear") {
-        button.classList.add(`${colorChoice}Selected`);
+        button.classList.add("selected");
     }
 }
 
 function releaseButtons() {
-    colorChoiceBtn.forEach(button => {
-        button.classList.remove(`${button.id}Selected`);
+    colorButton.forEach(button => {
+        button.classList.remove("selected");
     });
 }
 
 // Event listeners
-colorChoiceBtn.forEach(button => {
+colorButton.forEach(button => {
     button.addEventListener('click', () => {
         colorChoice = button.id;
         createGrid(colorChoice);
