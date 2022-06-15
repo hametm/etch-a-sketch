@@ -4,7 +4,7 @@ const slider = document.querySelector("#slider");
 const colorButton = document.querySelectorAll(".colorButton");
 const reginaAlert = document.querySelector("#reginaAlert");
 
-let userChoice = 10;
+let userChoice = 15;
 let colorChoice;
 
 createGrid();
