@@ -2,10 +2,12 @@ const grid = document.querySelector("#grid");
 const sizeChoice = document.querySelector("#sizeChoice");
 const slider = document.querySelector("#slider");
 const colorButton = document.querySelectorAll(".colorButton");
+const blackButton = document.querySelector("#black");
 const reginaAlert = document.querySelector("#reginaAlert");
 
 let userChoice = 15;
-let colorChoice;
+let colorChoice = "black";
+pressButton(blackButton);
 
 createGrid();
 
@@ -45,19 +47,19 @@ function createSquares() {
 }
 
 function clearGrid() {
-    grid.innerHTML = '';
+    grid.innerHTML = "";
 }
 
 function changeToRainbow(square) {
-    square.addEventListener('mouseover', () => {
+    square.addEventListener("mouseover", () => {
         let rainbowColors = ["red", "blue", "orange", "purple", "green", "yellow"];
         setRandomColor(rainbowColors, square);
     });
 }
 
 function changeToBlack(square) {
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = 'black';
+    square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
     });
 }
 
@@ -69,7 +71,7 @@ function changeToPink(square) {
 }
 
 function changeToChristmas(square) {
-    square.addEventListener('mouseover', () => {
+    square.addEventListener("mouseover", () => {
         let christmasColors = ["red", "green"];
         setRandomColor(christmasColors, square);
     });
@@ -79,17 +81,14 @@ function setRandomColor(colors, square) {
     currentIndex = colors.indexOf(square.style.backgroundColor);
     let randomColor = Math.floor(Math.random() * colors.length);
     square.style.backgroundColor = colors[randomColor];
-
 }
 
 function setSquareStyle(square) {
-    square.classList.add('square');
+    square.classList.add("square");
 }
 
 function pressButton(button) {
-    if (colorChoice != "clear") {
-        button.classList.add("selected");
-    }
+    if (colorChoice != "clear") button.classList.add("selected");
 }
 
 function releaseButtons() {
@@ -100,20 +99,19 @@ function releaseButtons() {
 
 // Event listeners
 colorButton.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
         colorChoice = button.id;
         createGrid(colorChoice);
         releaseButtons();
         pressButton(button);
-
     })
 });
 
-slider.addEventListener('mouseup', () => {
+slider.addEventListener("mouseup", () => {
     userChoice = slider.value;
     createGrid();
 });
 
-reginaAlert.addEventListener('click', () => {
+reginaAlert.addEventListener("click", () => {
     alert("Gretchen, stop trying to make \"fetch\" happen. It's not going to happen!");
 })
